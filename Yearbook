@@ -1,0 +1,1174 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://i0.wp.com/www.chicagotribune.com/wp-content/uploads/2026/04/ctc-l-superintendent-search07_229697518-e1775261664170.jpg?fit=780%2C9999px&ssl=1" rel="stylesheet">
+
+<style>
+    /* CSS RESET & VARIABLES - Scoped */
+    .yearbook-wrapper {
+        --bg-color: #fdfcf9;
+        --text-color: #111111;
+        --text-muted: #555555;
+        --border-color: #111111;
+        --accent-bg: #ffffff;
+        --chi-blue: #41B6E6;
+        --chi-red: #CE1126;
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        line-height: 1.6;
+    }
+
+    .yearbook-wrapper * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* TYPOGRAPHY */
+    .yearbook-wrapper h1, 
+    .yearbook-wrapper h2, 
+    .yearbook-wrapper h3, 
+    .yearbook-wrapper .headline-serif {
+        font-family: 'Lora', serif;
+        color: var(--text-color);
+        font-weight: 700;
+    }
+
+    /* HERO SECTION */
+    .yearbook-wrapper .hero {
+        padding: 4rem 5% 3rem 5%;
+        text-align: center;
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    .yearbook-wrapper .hero h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        letter-spacing: -1px;
+        margin-bottom: 1.25rem;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .yearbook-wrapper .hero h1::after {
+        content: '';
+        display: block;
+        width: 60%;
+        height: 4px;
+        background-color: var(--chi-red);
+        margin: 0.5rem auto 0;
+    }
+
+    .yearbook-wrapper .hero p {
+        font-size: 1.15rem;
+        color: var(--text-muted);
+    }
+
+    /* YEARBOOK GRID LAYOUT */
+    .yearbook-wrapper .yearbook-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 5% 4rem;
+    }
+
+    .yearbook-wrapper .race-section {
+        margin-bottom: 5rem;
+        border-top: 6px double var(--border-color);
+        padding-top: 2.5rem;
+    }
+
+    .yearbook-wrapper .race-header {
+        font-size: 1.85rem;
+        font-weight: 800;
+        margin-bottom: 0.2rem;
+        text-transform: uppercase;
+        color: var(--chi-red);
+    }
+
+    .yearbook-wrapper .race-sub {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--chi-blue);
+        margin-bottom: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .yearbook-wrapper .candidates-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        gap: 3rem;
+    }
+
+    /* YEARBOOK CARD STYLING */
+    .yearbook-wrapper .candidate-card {
+        display: flex;
+        background: var(--accent-bg);
+        border: 2px solid var(--border-color);
+        padding: 1.75rem;
+        gap: 1.75rem;
+        align-items: flex-start;
+        box-shadow: 5px 5px 0px var(--chi-blue);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .yearbook-wrapper .candidate-card:hover {
+        transform: translate(-3px, -3px);
+        box-shadow: 8px 8px 0px var(--chi-blue);
+    }
+
+    /* Alternate box shadow color for Incumbents to stand out */
+    .yearbook-wrapper .candidate-card.incumbent-card {
+        box-shadow: 5px 5px 0px var(--chi-red);
+    }
+    
+    .yearbook-wrapper .candidate-card.incumbent-card:hover {
+        box-shadow: 8px 8px 0px var(--chi-red);
+    }
+
+    .yearbook-wrapper .photo-wrapper {
+        flex: 0 0 150px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 3.5rem; /* Creates breathing room for the absolute label below */
+    }
+
+    /* Image Link Button Styling */
+    .yearbook-wrapper .photo-wrapper a.img-link {
+        display: block;
+        border: 2px solid var(--border-color);
+        background-color: #e0e0e0;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    }
+
+    .yearbook-wrapper .photo-wrapper a.img-link:hover {
+        transform: translateY(-4px);
+        box-shadow: 4px 4px 0px var(--border-color);
+    }
+
+    .yearbook-wrapper .photo-wrapper a.img-link:hover img {
+        filter: grayscale(0%) contrast(100%);
+    }
+
+    .yearbook-wrapper .photo-wrapper a.img-link img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+        filter: grayscale(10%) contrast(110%);
+    }
+
+    /* Typewriter Label Aesthetic */
+    .yearbook-wrapper .superlative {
+        font-family: 'Courier Prime', Courier, monospace;
+        font-size: 0.85rem;
+        line-height: 1.35;
+        color: var(--text-color);
+        background: #fff9e6; 
+        padding: 8px 10px;
+        border: 1px dashed var(--text-muted);
+        transform: rotate(-1.5deg);
+        position: absolute;
+        /* Image is 180px tall. 165px pins the top of the label exactly 15px above the bottom of the image. It expands downward if text wraps. */
+        top: 165px; 
+        left: -10px;
+        right: -10px;
+        z-index: 2;
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        pointer-events: none; /* Prevents the label from interfering with the clickable image behind it */
+    }
+
+    .yearbook-wrapper .candidate-card:nth-child(even) .superlative {
+        transform: rotate(1.5deg);
+    }
+
+    .yearbook-wrapper .bio-wrapper {
+        flex: 1;
+    }
+
+    .yearbook-wrapper .bio-wrapper h3 {
+        font-size: 1.4rem;
+        font-weight: 800;
+        margin-bottom: 0.35rem;
+    }
+
+    .yearbook-wrapper .role-tag {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        background: var(--text-color);
+        color: var(--accent-bg);
+        padding: 4px 8px;
+        margin-bottom: 1rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .yearbook-wrapper .role-tag.incumbent {
+        background: var(--chi-red);
+    }
+
+    .yearbook-wrapper .role-tag.write-in {
+        background: var(--chi-blue);
+    }
+
+    .yearbook-wrapper .bio-wrapper p {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        line-height: 1.5;
+    }
+
+    /* THIRD CANDIDATE NOTE CARD */
+    .yearbook-wrapper .third-candidate-card {
+        display: flex;
+        align-items: center;
+        background-color: var(--accent-bg);
+        border: 2px solid var(--border-color);
+        padding: 1.25rem;
+        margin-top: 2.5rem;
+        max-width: 650px;
+        box-shadow: 4px 4px 0px var(--text-muted);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .yearbook-wrapper .third-candidate-card:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 6px 6px 0px var(--text-muted);
+    }
+
+    .yearbook-wrapper .third-candidate-card a.img-link {
+        display: block;
+        margin-right: 1.25rem;
+        transition: transform 0.2s ease;
+    }
+    
+    .yearbook-wrapper .third-candidate-card a.img-link:hover {
+        transform: scale(1.05);
+    }
+
+    .yearbook-wrapper .third-candidate-card a.img-link img {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid var(--border-color);
+        background-color: #eeeeee;
+        display: block;
+    }
+
+    .yearbook-wrapper .third-candidate-card h4 {
+        font-size: 1.1rem;
+        font-weight: 800;
+        margin-bottom: 0.25rem;
+        color: var(--text-color);
+    }
+
+    .yearbook-wrapper .third-candidate-card p {
+        font-size: 0.9rem;
+        margin: 0;
+        color: var(--text-muted);
+        line-height: 1.4;
+    }
+
+    /* EXPLANATION SECTION */
+    .yearbook-wrapper .district-explanation {
+        background-color: #fff9e6; 
+        border: 2px solid var(--border-color);
+        padding: 3rem;
+        margin: 2rem 5% 4rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 8px 8px 0px var(--chi-blue);
+        position: relative;
+    }
+    
+    .yearbook-wrapper .district-explanation::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 8px;
+        background: repeating-linear-gradient(
+            -45deg,
+            var(--chi-blue),
+            var(--chi-blue) 10px,
+            var(--chi-red) 10px,
+            var(--chi-red) 20px
+        );
+    }
+
+    .yearbook-wrapper .district-explanation h2 {
+        font-size: 1.6rem;
+        font-weight: 800;
+        margin-bottom: 1.25rem;
+        text-transform: uppercase;
+        letter-spacing: -0.5px;
+    }
+
+    .yearbook-wrapper .district-explanation p {
+        margin-bottom: 1.25rem;
+        font-size: 1.05rem;
+        color: var(--text-color);
+    }
+
+    @media (max-width: 650px) {
+        .yearbook-wrapper .candidates-grid {
+            grid-template-columns: 1fr;
+        }
+        .yearbook-wrapper .candidate-card {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 1.5rem;
+        }
+        .yearbook-wrapper .photo-wrapper {
+            flex: auto;
+            width: 150px;
+            max-width: 150px;
+            margin-bottom: 1rem;
+        }
+    }
+</style>
+
+<div class="yearbook-wrapper">
+    <main id="content">
+        <section class="hero">
+            <h1>Class of the New School Board</h1>
+            <p>Let's be real—this upcoming election is actually a massive deal. For the first time ever, the whole school board is being elected. We're 8th graders, and we're like, serious about having a good future and stuff. The adults who win these seats across all 20 districts and citywide are literally going to be in charge of our high school years. So, to help everyone see who is stepping up to run our schools, we pulled actual candidate names straight from official Ballotpedia rosters and assigned each of them an official high school yearbook superlative.</p>
+        </section>
+
+        <div class="yearbook-container">
+
+            <!-- AT-LARGE BOARD PRESIDENT -->
+            <section class="race-section">
+                <h2 class="race-header">At-Large Board President</h2>
+                <p class="race-sub">Citywide Representation • 1 Seat Available</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="https://www.jennifercuster.com/" class="img-link" target="_blank" aria-label="Visit Jennifer Custer's website">
+                                <img src="https://cst.brightspotcdn.com/dims4/default/48f631b/2147483647/strip/true/crop/1024x585+0+282/resize/1461x834!/format/webp/quality/90/?url=https%3A%2F%2Fchorus-production-cst-web.s3.us-east-1.amazonaws.com%2Fbrightspot%2Ff8%2F15%2F51077feb4d998dcb93017e963533%2F0018-dsc07735copy.jpg" alt="Jennifer Custer">
+                            </a>
+                            <div class="superlative">"Most likely to unite the entire city to support every student, teacher, and school."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Jennifer Custer</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>An incredibly unifying leader whose campaign is built on bringing communities together. She has an inspiring vision to passionately support all schools, uplift every student, and empower teachers across the entire district.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Hilario Dominguez's website">
+                                <img src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/hd-face_20260623_034242_30311_1.png" alt="Hilario Dominguez">
+                            </a>
+                            <div class="superlative">"Most likely to run for Mayor and win."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Hilario Dominguez</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>An inspiring, deeply committed community advocate and visionary educator. Focused on true equity, robust neighborhood school funding, and ensuring every student has the resources they need to thrive. A true champion for Chicago's families.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="https://www.marketaxess.com/" class="https://hilarioforcps.com/" target="_blank" aria-label="Visit Jessica Biggs's website">
+                                <img src="https://pbs.twimg.com/profile_images/893314140315561985/Da0aChCw_400x400.jpg" alt="Jessica Biggs">
+                            </a>
+                            <div class="superlative">"Most likely to schedule a follow-up meeting about the first meeting."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Jessica Biggs</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>An administrator focused on maintaining established bureaucratic procedures, policy compliance, and managing existing district structures rather than pursuing systemic reform.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="https://www.okcupid.com/" class="img-link" target="_blank" aria-label="Visit Sendhil Revuluri's website">
+                                <img src="https://www.cpsboe.org/content/images/person/revuluri_sendhil_photo_june-2019-whitebg.jpg/image-full;max$250,0.ImageHandler" alt="Sendhil Revuluri">
+                            </a>
+                            <div class="superlative">"Most likely to suggest forming a committee to study the problem."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Sendhil Revuluri</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>An institutional candidate heavily reliant on traditional governance models, prioritizing complex data analysis and lengthy reviews over immediate community action.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="third-candidate-card">
+                    <a href="https://www.zoom.com/" class="img-link" target="_blank" aria-label="Visit Victor P. Henderson's website">
+                        <img src="https://placehold.co/100x100/eeeeee/333333?text=VH" alt="Victor P. Henderson">
+                    </a>
+                    <div>
+                        <h4>Also on the ballot: Victor P. Henderson</h4>
+                        <p>An attorney and CPA running for the At-Large Board President seat.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 1A -->
+            <section class="race-section">
+                <h2 class="race-header">District 1A</h2>
+                <p class="race-sub">Northwest Side • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card incumbent-card">
+                        <div class="photo-wrapper">
+                            <a href="https://edbannon.com/" class="img-link" target="_blank" aria-label="Visit Ed Bannon's website">
+                                <img src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/EdBannon.JPG" alt="Ed Bannon">
+                            </a>
+                            <div class="superlative">"Most likely to drop out of college to start an indie folk band."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Ed Bannon</h3>
+                            <span class="role-tag incumbent">Incumbent</span>
+                            <p>Community organizer focusing on expanding after-school arts programs, fully funded neighborhood campuses, and increasing Local School Council authority.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="https://elections.il.gov/campaigndisclosure/CDPDFViewer.aspx?FiledDocID=C4q94MDj2yJCqYfdqS5%2FRw%3D%3D&DocType=y4%2BQAKnRNtkuIDOSztTByg%3D%3D" class="img-link" target="_blank" aria-label="Visit Margie Luczak's website">
+                                <img src="https://i.postimg.cc/ZnDt8t7t/disgirlwiththeflag.png" alt="Margie Luczak">
+                            </a>
+                            <div class="superlative">"Most likely to organize a protest against cafeteria tater tots."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Margie Luczak</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>CPS parent and neighborhood advocate running on a platform of smaller class sizes, infrastructure upgrades, and bilingual student resources.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 1B -->
+            <section class="race-section">
+                <h2 class="race-header">District 1B</h2>
+                <p class="race-sub">Northwest Side • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="Communityforclaudia.com" class="img-link" target="_blank" aria-label="Visit Claudia Peralta's website">
+                                <img src="https://i.ibb.co/Q7v9GnGJ/Claudia-Peralta.png" alt="Claudia Peralta">
+                            </a>
+                            <div class="superlative">"Most likely to inspire a generation of students to follow their dreams."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Claudia Peralta</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>Dedicated educator running to bridge the communication gap between central office bureaucrats and local neighborhood families.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="https://www.wheels.com/public/" class="img-link" target="_blank" aria-label="Visit Michelle Pierre's website">
+                                <img src="https://i.postimg.cc/3wRKD1Jh/Michellep.png" alt="Michelle Pierre">
+                            </a>
+                            <div class="superlative">"Most likely to read the entire school rulebook just to find loopholes."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Michelle Pierre</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>Policy specialist emphasizing early literacy outcomes, equitable special education funding, and expanding magnet school accessibility.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 2A (HAS 3RD CANDIDATE) -->
+            <section class="race-section">
+                <h2 class="race-header">District 2A</h2>
+                <p class="race-sub">Far North Side • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card incumbent-card">
+                        <div class="photo-wrapper">
+                            <a href="https://ebony4education.org/" class="img-link" target="_blank" aria-label="Visit Ebony DeBerry's website">
+                                <img src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Ebony_DeBerry_20240808_095534.png" alt="Ebony DeBerry">
+                            </a>
+                            <div class="superlative">"Most likely to change the world for the better."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Ebony DeBerry</h3>
+                            <span class="role-tag incumbent">Incumbent</span>
+                            <p>A powerhouse educator and community leader deeply committed to restorative justice and mental health resources. An unwavering advocate for students who consistently delivers real, tangible results.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Bruce Leon's website">
+                                <img src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/BruceLeon26.png" alt="Bruce Leon">
+                            </a>
+                            <div class="superlative">"Most likely to focus on the bottom line."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Bruce Leon</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>A business owner whose platform relies heavily on corporate efficiency models, emphasizing administrative metrics and vocational pipelines over holistic student development.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="third-candidate-card">
+                    <a href="#" class="img-link" target="_blank" aria-label="Visit Hector Morales's website">
+                        <img src="https://www.neiu.edu/sites/default/files/styles/wide/public/2025-01/Hector.jpg?itok=6pv8T5fE" alt="Hector Morales">
+                    </a>
+                    <div>
+                        <h4>Also on the ballot: Hector Morales</h4>
+                        <p>A local candidate running to represent District 2A on the school board.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 2B (HAS 3RD CANDIDATE) -->
+            <section class="race-section">
+                <h2 class="race-header">District 2B</h2>
+                <p class="race-sub">Far North Side • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card incumbent-card">
+                        <div class="photo-wrapper">
+                            <a href="https://www.ctulocal1.org/" class="img-link" target="_blank" aria-label="Visit Deborah Pope's website">
+                                <img src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/resized-debbiePOPE_20260630_061601_30659_1.jpg" alt="Debby Pope">
+                            </a>
+                            <div class="superlative">"Most likely to sneak you an extra cookie and call you 'sweetheart' when you're having a bad day."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Deborah "Debby" Pope</h3>
+                            <span class="role-tag incumbent">Incumbent</span>
+                            <p>Veteran teacher with decades of classroom experience, advocating for protecting educator pensions and standardizing curriculum access.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="https://www.debbyfordistrict2b.com/" class="img-link" target="_blank" aria-label="Visit Daniel Basco's website">
+                                <img src="https://i.ibb.co/FkgsVkdg/Screenshot-2026-08-19-3-34-04-PM.png" alt="Daniel Basco">
+                            </a>
+                            <div class="superlative">"Most likely to show up to prom wearing a three-piece tailored suit."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Daniel Basco</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>Neighborhood organizer pushing for modernized school facilities, green energy campuses, and transparent vendor contracting.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="third-candidate-card">
+                    <a href="#" class="img-link" target="_blank" aria-label="Visit Kyna Lenhof's website">
+                        <img src="https://img1.wsimg.com/isteam/ip/7a021faa-a4d0-4470-a8ec-328e476e7a23/Kyna-Lenhof-posing.png" alt="Kyna Lenhof">
+                    </a>
+                    <div>
+                        <h4>Also on the ballot: Kyna Lenhof</h4>
+                        <p>A community member and candidate for the District 2B school board seat.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 3A -->
+            <section class="race-section">
+                <h2 class="race-header">District 3A</h2>
+                <p class="race-sub">North/Central Side • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card incumbent-card">
+                        <div class="photo-wrapper">
+                            <a href="https://www.normaforchicago.org/" class="img-link" target="_blank" aria-label="Visit Norma Rios Sierra's website">
+                                <img src="https://www.cpsboe.org/content/images/person/norma_rios-sierra_photo_1.jpg" alt="Norma Rios-Sierra">
+                            </a>
+                            <div class="superlative">"Most likely to fight tirelessly for every single student."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Norma Rios Sierra</h3>
+                            <span class="role-tag incumbent">Incumbent</span>
+                            <p>A stellar, proven leader and fierce education advocate prioritizing neighborhood school investments, bilingual resources, and genuine community-led decision making. She puts students first, every time.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="https://www.donesforschoolboard.com/" class="img-link" target="_blank" aria-label="Visit Peter Gonzales's website">
+                                <img src="https://i.ibb.co/mFrQWmSm/Screenshot-2026-08-19-3-26-06-PM.png" alt="Peter Gonzales">
+                            </a>
+                            <div class="superlative">"Most likely to speak in bureaucratic jargon."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Peter Gonzales</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>A policy professional whose campaign centers on facility management and standardized after-school frameworks rather than direct community empowerment.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 3B -->
+            <section class="race-section">
+                <h2 class="race-header">District 3B</h2>
+                <p class="race-sub">North/Central Side • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card incumbent-card">
+                        <div class="photo-wrapper">
+                            <a href="https://en.wikipedia.org/wiki/Iron_March" class="img-link" target="_blank" aria-label="Visit Carlos A. Rivas Jr.'s website">
+                                <img src="https://i.ibb.co/PZpPNy2T/Screenshot-2026-08-19-3-38-22-PM.png" alt="Carlos Rivas Jr.">
+                            </a>
+                            <div class="superlative">"Most likely to color-coordinate their highlighters by subject."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Carlos A. Rivas Jr.</h3>
+                            <span class="role-tag incumbent">Incumbent</span>
+                            <p>Focuses on equitable resource allocation between selective enrollment high schools and neighborhood open-enrollment campuses.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="https://www.donesforschoolboard.com/" class="img-link" target="_blank" aria-label="Visit Jason Dónes's website">
+                                <img src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/JasonDones2024.jpg" alt="Jason Dónes">
+                            </a>
+                            <div class="superlative">"Most likely to ask for extra credit on the last day of school."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Jason Dónes</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>Former classroom teacher championing full-time nurses, librarians, and social workers in every single school building.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 4A (HAS 3RD CANDIDATE) -->
+            <section class="race-section">
+                <h2 class="race-header">District 4A</h2>
+                <p class="race-sub">Lakefront / Lincoln Park • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card incumbent-card">
+                        <div class="photo-wrapper">
+                            <a href="https://neighborsforkarenzaccor.org/" class="img-link" target="_blank" aria-label="Visit Karen Zaccor's website">
+                                <img src="https://neighborsforkarenzaccor.org/wp-content/uploads/2024/08/Karen-Headshot.jpeg" alt="Karen Zaccor">
+                            </a>
+                            <div class="superlative">"Most Likely to still be fighting for our classrooms long after everyone else has gone home."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Karen Zaccor</h3>
+                            <span class="role-tag incumbent">Incumbent</span>
+                            <p>Retired CPS educator focusing on retaining experienced teaching staff, arts curriculums, and reducing standardized testing fatigue.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="https://www.hyatt.com/" class="img-link" target="_blank" aria-label="Visit Angel Alvarez's website">
+                                <img src="https://i.postimg.cc/43rrNQY0/angel-A.png" alt="Angel Alvarez">
+                            </a>
+                            <div class="superlative">"Most likely to have his nose in a spreadsheet."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Angel Alvarez</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>An exceptional, dynamic community leader advocating for robust STEM facilities and improved athletic department budgeting. A highly effective voice for city high schools.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="third-candidate-card">
+                    <a href="https://www.commoncentseducation.com/about" class="img-link" target="_blank" aria-label="Visit Ellen Sherratt's website">
+                        <img src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Sherratt-32-toned-_2__20260704_135922_30874_1.jpeg" alt="Ellen Sherratt">
+                    </a>
+                    <div>
+                        <h4>Also on the ballot: Ellen Sherratt</h4>
+                        <p>An education researcher running for the District 4A school board seat.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 4B -->
+            <section class="race-section">
+                <h2 class="race-header">District 4B</h2>
+                <p class="race-sub">Lakefront / Near North • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card incumbent-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Ellen Rosenfeld's website">
+                                <img src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Ellen_RosenfeldIL.jpg" alt="Ellen Rosenfeld">
+                            </a>
+                            <div class="superlative">"Most likely to run a marathon on a random Tuesday morning."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Ellen Rosenfeld</h3>
+                            <span class="role-tag incumbent">Incumbent</span>
+                            <p>Parent leader and current board member promoting transparent school budgeting and protecting diverse special education programs.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Taurus's website">
+                                <img src="https://i.postimg.cc/CxqF6y42/T.jpg" alt="Write-In / Taurus">
+                            </a>
+                            <div class="superlative">"Most likey to launch the Air Bud deferense against thier pending ballot challenge."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Taurus</h3>
+                            <span class="role-tag write-in">Write-In Candidate</span>
+                            <p>With Ellen Rosenfeld leading the ballot in 4B, this slot represents grassroots community challengers advocating for fiscal accountability and driving the money out of politics. You can often find him throwing back a cool one at Gman Tavern on Clark after a long walk on the campaign trail.</p>
+                            <p style="margin-top: 0.75rem; font-weight: 700; color: var(--chi-red);">
+                                Important: Taurus is a write-in candidate! In order to be elected, his name has to be written on the ballot. You must explicitly spell out the name "TAURUS" on the write-in line.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 5A -->
+            <section class="race-section">
+                <h2 class="race-header">District 5A</h2>
+                <p class="race-sub">West Side • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card incumbent-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Aaron Brown's website">
+                                <img src="https://www.cpsboe.org/content/images/person/jitubrown_1.jpg/image-full;max$250,0.ImageHandler" alt="Aaron Brown">
+                            </a>
+                            <div class="superlative">"Most likely to coach the underdog team all the way to the state championships!"</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Aaron "Jitu" Brown</h3>
+                            <span class="role-tag incumbent">Incumbent</span>
+                            <p>Nationally recognized education organizer fighting against school closures and advocating for the Sustainable Community School model.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit LaPamela Williams's website">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAC53FXPa4-Ub2MnyANAL585ma8M9ydhWPKG5I9xCWEg&s" alt="LaPamela Williams">
+                            </a>
+                            <div class="superlative">"Most likely to attend scheduled committee meetings."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>LaPamela Williams</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>Community leader focused on improving parent engagement and ensuring local schools have dedicated trauma-informed counseling teams.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 5B -->
+            <section class="race-section">
+                <h2 class="race-header">District 5B</h2>
+                <p class="race-sub">West Side • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card incumbent-card">
+                        <div class="photo-wrapper">
+                            <a href="https://www.blaiseforschoolboard.com/" class="img-link" target="_blank" aria-label="Visit Michilla Blaise's website">
+                                <img src="https://www.cpsboe.org/content/images/person/michilla_blaise-6_resized.jpg" alt="Michilla Blaise">
+                            </a>
+                            <div class="superlative">"Most likely to balance a multi-billion-dollar district budget faster than figuring out what her teenagers actually want for dinner."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Michilla "Kyla" Blaise</h3>
+                            <span class="role-tag incumbent">Incumbent</span>
+                            <p>Dedicated youth advocate running to modernize West Side school infrastructure and expand summer learning opportunities.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Anthony Hargrove's website">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkzVQFqi3_rgyi8Do3y3zq2dSwWZiZ8pv91sELpY_Zow&s=10" alt="Anthony Hargrove">
+                            </a>
+                            <div class="superlative">"Most likely to DJ the homecoming dance and take requests."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Anthony Hargrove</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>Local mentor emphasizing after-school programs, athletics funding, and clear vocational readiness pathways for graduating seniors.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 6A (HAS 3RD CANDIDATE) -->
+            <section class="race-section">
+                <h2 class="race-header">District 6A</h2>
+                <p class="race-sub">Downtown / Near South Side • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card incumbent-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Anusha Thotakura's website">
+                                <img src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Anusha_Thotakura.jpg" alt="Anusha Thotakura">
+                            </a>
+                            <div class="superlative">"Most likely to bring homemade cookies to a budget meeting."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Anusha Thotakura</h3>
+                            <span class="role-tag incumbent">Incumbent</span>
+                            <p>Education advocate working to alleviate school overcrowding in growing neighborhoods and improve special education services.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Isaiah White's website">
+                                <img src="https://i.ibb.co/rRvNpN1w/Screenshot-2026-08-20-2-47-27-PM.png" alt="Isaiah White">
+                            </a>
+                            <div class="superlative">"Most likely to bring a Chicago-style hot dog to a formal dinner party."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Isaiah White</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>A CPS educator whose primary policy focus seems to be ensuring that every school cafeteria serves high-quality hot dogs. While he means well, he spends an unusual amount of time debating the merits of celery salt and neon green relish instead of reading the budget.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="third-candidate-card">
+                    <a href="#" class="img-link" target="_blank" aria-label="Visit Brenda Lee Anderson's website">
+                        <img src="https://i.ibb.co/8LvK2tQp/Screenshot-2026-08-20-2-50-53-PM.png" alt="Brenda Lee Anderson">
+                    </a>
+                    <div>
+                        <h4>Also on the ballot: Brenda Lee Anderson</h4>
+                        <p>A community organizer running for the District 6A school board seat.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 6B -->
+            <section class="race-section">
+                <h2 class="race-header">District 6B</h2>
+                <p class="race-sub">Near South Side / Bridgeport • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Brittany Kimble's website">
+                                <img src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Brittany-Kimble-Headshot-Web_20260711_011709_45170_1.jpeg" alt="Brittany Kimble">
+                            </a>
+                            <div class="superlative">"Most likely to volunteer to clean up after the pep rally."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Brittany B. Kimble</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>Community organizer pushing for universal pre-K access and stronger nutrition standards in school lunchrooms.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Michael Neal's website">
+                                <img src="https://ballotpedia.s3.us-east-1.amazonaws.com/images/thumb/6/68/SubmitPhoto-150px.png" alt="Michael Neal">
+                            </a>
+                            <div class="superlative">"Most likely to carry a briefcase to sophomore biology."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Michael L. Neal</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>Professional running to reform CPS vendor contracting practices and direct more central office dollars straight to classrooms.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 7A -->
+            <section class="race-section">
+                <h2 class="race-header">District 7A</h2>
+                <p class="race-sub">Southwest Side • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card incumbent-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Emma Lozano's website">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Ri8vioSg-M3qEk6cgeqGhem_ckCfNrnliPsKq5dypw&s" alt="Emma Lozano">
+                            </a>
+                            <div class="superlative">"Most likely to change the world with her endless compassion and brilliance."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Emma Lozano</h3>
+                            <span class="role-tag incumbent">Incumbent</span>
+                            <p>An extraordinarily gifted and visionary district leader. She brings unparalleled wisdom, grace, and tireless dedication to her work, creating beautiful, culturally responsive environments where every single student feels deeply valued and understood.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Jesus Ayala Jr.'s website">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSehdr2AnkEheKdGRXrACQ7HdGichNKek0S7RUPLPsK4D8nZr-FGk5x-AM&s=10" alt="Jesus Ayala Jr.">
+                            </a>
+                            <div class="superlative">"Most likely to remind everyone when graduation countdown hits 100 days."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Jesus Ayala Jr.</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>Neighborhood leader emphasizing fiscal discipline, campus safety, and expanding dual-language immersion programs across the district.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 7B -->
+            <section class="race-section">
+                <h2 class="race-header">District 7B</h2>
+                <p class="race-sub">Southwest Side • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card incumbent-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Yesenia Lopez's website">
+                                <img src="https://www.cpsboe.org/content/images/person/yesenia_lopez_photo_2.jpg/image-full;max$250,0.ImageHandler" alt="Yesenia Lopez">
+                            </a>
+                            <div class="superlative">"Most likely to run for student council president three years in a row."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Yesenia Lopez</h3>
+                            <span class="role-tag incumbent">Incumbent</span>
+                            <p>Current board member championing safe walk-to-school corridors, neighborhood school retention, and increased funding for fine arts teachers.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Erika Diaz-Chavez's website">
+                                <img src="https://ballotpedia.s3.us-east-1.amazonaws.com/images/thumb/6/68/SubmitPhoto-150px.png" alt="Erika Diaz-Chavez">
+                            </a>
+                            <div class="superlative">"Most likely to stay up until 3 AM making flashcards."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Erika E. Diaz-Chavez</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>Community advocate working to ensure comprehensive mental health support networks exist in every Southwest Side campus.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 8A -->
+            <section class="race-section">
+                <h2 class="race-header">District 8A</h2>
+                <p class="race-sub">Far Southwest Side • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card incumbent-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Angel Gutierrez's website">
+                                <img src="https://ballotpedia.s3.us-east-1.amazonaws.com/images/thumb/6/68/SubmitPhoto-150px.png" alt="Angel Gutierrez">
+                            </a>
+                            <div class="superlative">"Most likely to fall asleep during 1st period algebra and still get an A."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Angel Gutierrez</h3>
+                            <span class="role-tag incumbent">Incumbent</span>
+                            <p>Nonprofit executive focused on community partnerships, inclusive classrooms, and career-technical training opportunities.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Felix Ponce's website">
+                                <img src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/FelixPonce2024.jpeg" alt="Felix Ponce">
+                            </a>
+                            <div class="superlative">"Most likely to direct the school musical and play the lead role."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Felix Ponce</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>High school educator advocating for the protection of fine arts electives and educator classroom autonomy.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 8B -->
+            <section class="race-section">
+                <h2 class="race-header">District 8B</h2>
+                <p class="race-sub">Far Southwest Side • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card incumbent-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Cydney Wallace's website">
+                                <img src="https://ballotpedia.s3.us-east-1.amazonaws.com/images/thumb/6/68/SubmitPhoto-150px.png" alt="Cydney Wallace">
+                            </a>
+                            <div class="superlative">"Most likely to know the exact score of every Friday night football game."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Cydney Wallace</h3>
+                            <span class="role-tag incumbent">Incumbent</span>
+                            <p>Community leader promoting strong trade school partnerships, campus safety improvements, and upgraded neighborhood athletic facilities.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Juan Ignacio Gonzalez's website">
+                                <img src="https://ballotpedia.s3.us-east-1.amazonaws.com/images/thumb/6/68/SubmitPhoto-150px.png" alt="Juan Gonzalez">
+                            </a>
+                            <div class="superlative">"Most likely to win a chess tournament blindfolded."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Juan Ignacio Gonzalez</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>Educator and parent pushing for expanded advanced placement (AP) course offerings across local high schools.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 9A -->
+            <section class="race-section">
+                <h2 class="race-header">District 9A</h2>
+                <p class="race-sub">South Side / Roseland • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card incumbent-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Angel Luis Velez Rodriguez's website">
+                                <img src="https://www.cpsboe.org/content/images/person/2025_08_28_headshot_angelvelez.jpg" alt="Angel Velez">
+                            </a>
+                            <div class="superlative">"Most likely to be an outstanding advocate for students."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Angel Luis Velez Rodriguez</h3>
+                            <span class="role-tag incumbent">Incumbent</span>
+                            <p>A phenomenal current board member leading the charge for increased special education funding and transparent standardized testing reform. Dedicated and effective.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Brittany R. Bailey Preston's website">
+                                <img src="https://ballotpedia.s3.us-east-1.amazonaws.com/images/thumb/6/68/SubmitPhoto-150px.png" alt="Brittany Bailey Preston">
+                            </a>
+                            <div class="superlative">"Most likely to attend every single committee meeting."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Brittany R. Bailey Preston</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>A neighborhood participant running a standard campaign focused on traditional infrastructure improvements, relying heavily on typical institutional approaches.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 9B -->
+            <section class="race-section">
+                <h2 class="race-header">District 9B</h2>
+                <p class="race-sub">Far South Side • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card incumbent-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Therese Boyle's website">
+                                <img src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Therese_Boyle_20240915_025108.jpeg" alt="Therese Boyle">
+                            </a>
+                            <div class="superlative">"Most likely to suggest forming a subcommittee."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Therese Boyle</h3>
+                            <span class="role-tag incumbent">Incumbent</span>
+                            <p>A former employee focused heavily on compliance and established fiscal procedures, prioritizing standard administrative management over new educational models.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Katherine S. Dunneback's website">
+                                <img src="https://actblue-indigo-uploads.s3.amazonaws.com/uploads/list-editor/86013d16-c743-442c-a772-593bfbcdc327-brandings/transient/header/image_url/20260531_Kate4SchoolBoard_07.JPG" alt="Katherine Dunneback">
+                            </a>
+                            <div class="superlative">"Most likely to genuinely transform neighborhood schools."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Katherine S. Dunneback</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>An exceptional education advocate bringing fresh, vital energy to ensure neighborhood schools have fully stocked libraries, updated technology labs, and equitable funding. A much-needed perspective.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 10A (HAS 3RD CANDIDATE) -->
+            <section class="race-section">
+                <h2 class="race-header">District 10A</h2>
+                <p class="race-sub">Hyde Park / South Shore • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card incumbent-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Che Smith's website">
+                                <img src="https://m.media-amazon.com/images/I/911Z-jnznhL._UF1000,1000_QL80_.jpg" alt="Che Smith">
+                            </a>
+                            <div class="superlative">"Most likely to write a Grammy-nominated song in the back of homeroom."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Che "Rhymefest" Smith</h3>
+                            <span class="role-tag incumbent">Incumbent</span>
+                            <p>Artist and community organizer promoting creative arts integration, trauma healing centers, and community-led school governance.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Tameka Walton's website">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTXJd0J1_v-riGpEb9Mv4iL10akbySgc0er4kPQkbV_w&s" alt="Tameka Walton">
+                            </a>
+                            <div class="superlative">"Advocating for school governance that is accountable to communities."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Tameka Walton</h3>
+                            <span class="role-tag write-in">Write-In Candidate</span>
+                            <p>Community leader, social worker, and founder of Restored Hope. Appointed to the ISBE in 2026 and a former Chicago Peace Fellow, her work centers on trauma-informed healing, advancing education equity, and keeping neighborhood schools open.</p>
+                            <p style="margin-top: 0.75rem; font-weight: 700; color: var(--chi-red);">
+                                Important: Tameka Walton is a write-in candidate! In order to be elected, her name has to be written on the ballot. You must explicitly spell out the name "TAMEKA WALTON" on the write-in line.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="third-candidate-card">
+                    <a href="#" class="img-link" target="_blank" aria-label="Visit Krista Nichols Alston's website">
+                        <img src="https://ballotpedia.s3.us-east-1.amazonaws.com/images/thumb/6/68/SubmitPhoto-150px.png" alt="Krista Nichols Alston">
+                    </a>
+                    <div>
+                        <h4>Also on the ballot: Krista Nichols Alston</h4>
+                        <p>A local candidate running to represent District 10A on the school board.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISTRICT 10B (HAS 3RD CANDIDATE) -->
+            <section class="race-section">
+                <h2 class="race-header">District 10B</h2>
+                <p class="race-sub">Southeast Side / Pullman • Top 2 Candidates Shown</p>
+                <div class="candidates-grid">
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Connie Anderson's website">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT77X6_2RJqrqjGTRQGyR0yPJBkfanY7C1dlyPRT_sWzg&s=10" alt="Connie Anderson">
+                            </a>
+                            <div class="superlative">"Most likely to start a school podcast that goes viral."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Connie Anderson</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>Community leader advocating for high-speed digital infrastructure, neighborhood campus safety, and modern STEM curriculum access.</p>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="photo-wrapper">
+                            <a href="#" class="img-link" target="_blank" aria-label="Visit Rosita Chatonda's website">
+                                <img src="https://i.ibb.co/Vc8c8nN6/Screenshot-2026-08-20-2-54-31-PM.png" alt="Rosita Chatonda">
+                            </a>
+                            <div class="superlative">"Most likely to review the meeting minutes."</div>
+                        </div>
+                        <div class="bio-wrapper">
+                            <h3>Rosita Chatonda</h3>
+                            <span class="role-tag">Candidate</span>
+                            <p>A candidate focused on reviewing district infrastructure plans and reading staffing reports for the Southeast Side schools.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="third-candidate-card">
+                    <a href="#" class="img-link" target="_blank" aria-label="Visit Patrick C. Watson's website">
+                        <img src="https://ballotpedia.s3.us-east-1.amazonaws.com/images/thumb/6/68/SubmitPhoto-150px.png" alt="Patrick C. Watson">
+                    </a>
+                    <div>
+                        <h4>Also on the ballot: Patrick C. Watson</h4>
+                        <p>A community member running for the District 10B school board seat.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <section class="district-explanation">
+            <h2>Wait... Why are the Districts Numbered 1A, 1B, 2A, 2B?</h2>
+            <p>If you are looking at these races and thinking, <em>"Why can't we just have districts 1 through 20 like normal human beings?"</em> — trust us, we agree completely.</p>
+            <p>Here is how we ended up with this alphabet soup: During the historic transition from a 100% mayoral-appointed school board to a fully elected one, state lawmakers created a weird "hybrid" phase. They carved Chicago into 10 giant districts. Each district was split into two sub-districts: an <strong>"Elected"</strong> side and an <strong>"Appointed"</strong> side.</p>
+            <p>If an elected candidate won inside sub-district 1A, the Mayor was legally required to appoint their board counterpart from sub-district 1B (hence the 'A' and 'B' splits). Now that the school board is transitioning to a 20-member fully elected board (plus the 1 At-Large President), each of those split sub-districts is simply becoming its own standalone elected race.</p>
+            <p><strong>Commentary from the 8th Grade Dev Team:</strong> This numbering system is honestly so dumb. It confuses parents, it confuses voters, and it made writing the HTML arrays for this project twice as annoying. They should just re-number the districts 1 through 20 and save everyone a massive headache.</p>
+        </section>
+    </main>
+</div>
