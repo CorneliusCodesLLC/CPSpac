@@ -1,0 +1,85 @@
+<div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 650px; margin: 0 auto; background-color: #fcfcfc; border: 4px solid #111111; overflow: hidden;">
+  
+  <!-- Header Section -->
+  <div style="background-color: #111111; color: #ffffff; padding: 45px 20px 35px; text-align: center;">
+    <p style="margin: 0 0 12px 0; font-size: 0.95em; text-transform: uppercase; letter-spacing: 2px; color: #d38c35; font-weight: bold;">
+      The Chicago Public Schools Alumni PAC Presents
+    </p>
+    <h1 style="margin: 0; font-size: 3.2em; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; color: #ffffff; line-height: 1.1;">
+      Parents Night Out
+    </h1>
+    <p style="font-size: 1.2em; margin-top: 15px; font-weight: 300; letter-spacing: 2px; text-transform: uppercase; color: #ffffff;">
+      Parenting is hard. Everyone needs a break.
+    </p>
+  </div>
+
+  <!-- Quick Details Bar (Moved to Top) -->
+  <div style="background-color: #d38c35; color: #111111; padding: 20px; text-align: center; border-bottom: 4px solid #111111;">
+    <p style="margin: 0; font-size: 1.15em; text-transform: uppercase; letter-spacing: 1.5px; font-weight: bold; line-height: 1.7;">
+      📍 Dovetail Brewery (1800 W Belle Plaine Ave)<br>
+      📅 Sept 24, 2026<br>
+      ⏰ 6:00 PM - 9:00 PM<br>
+      🍻 Open Bar (Poured by the Candidates)
+    </p>
+  </div>
+
+  <!-- Main Content -->
+  <div style="padding: 40px 35px 25px 35px;">
+    <h2 style="color: #111111; text-align: center; margin-top: 0; font-size: 2em; text-transform: uppercase; letter-spacing: 1px;">This Round's On Us.</h2>
+    <p style="font-size: 1.15em; line-height: 1.7; color: #333333; text-align: center; font-weight: 300;">
+      You've earned a night off, so the <strong>Chicago Public Schools Alumni PAC</strong> is picking up the tab. Grab a beer on us and come meet your CTU-endorsed Northside School Board Candidates in the best way possible: with them pouring your drinks right behind the bar.
+    </p>
+
+    <!-- Candidate List Box with Dark Button Links
+    <div style="margin: 35px 0; padding: 30px 0; text-align: center; border-top: 2px dashed #dddddd; border-bottom: 2px dashed #dddddd;">
+      <p style="margin: 0 0 20px 0; font-size: 1.2em; color: #111111; text-transform: uppercase; letter-spacing: 1px; font-weight: 800;">
+        Featuring Guest Bartenders:<br>
+      </p>-->
+      
+      <!-- Interactive Candidate Links -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
+        <!--<a href="https://hilarioforcps.com/" target="_blank" style="display: inline-block; padding: 10px 15px; background-color: #111111; color: #ffffff; text-decoration: none; text-transform: uppercase; font-size: 0.9em; font-weight: bold; border-radius: 4px; letter-spacing: 1px;">Hilario Dominguez</a>-->
+        <!--<a href="https://www.normaforchicago.org/" target="_blank" style="display: inline-block; padding: 10px 15px; background-color: #111111; color: #ffffff; text-decoration: none; text-transform: uppercase; font-size: 0.9em; font-weight: bold; border-radius: 4px; letter-spacing: 1px;">Norma Rios Sierra</a>-->
+        <!--<a href="https://jasondones.com/" target="_blank" style="display: inline-block; padding: 10px 15px; background-color: #111111; color: #ffffff; text-decoration: none; text-transform: uppercase; font-size: 0.9em; font-weight: bold; border-radius: 4px; letter-spacing: 1px;">Jason Dónes</a>-->
+        <!--<a href="https://neighborsforkarenzaccor.org/" target="_blank" style="display: inline-block; padding: 10px 15px; background-color: #111111; color: #ffffff; text-decoration: none; text-transform: uppercase; font-size: 0.9em; font-weight: bold; border-radius: 4px; letter-spacing: 1px;">Karen Zaccor</a>-->
+        <!--<a href="https://www.taurusforchicago.com/" target="_blank" style="display: inline-block; padding: 10px 15px; background-color: #111111; color: #ffffff; text-decoration: none; text-transform: uppercase; font-size: 0.9em; font-weight: bold; border-radius: 4px; letter-spacing: 1px;">Taurus</a>-->
+       <!-- <a href="https://www.Debbypope.com" target="_blank" style="display: inline-block; padding: 10px 15px; background-color: #111111; color: #ffffff; text-decoration: none; text-transform: uppercase; font-size: 0.9em; font-weight: bold; border-radius: 4px; letter-spacing: 1px;">Debby Pope</a>-->
+        <!--<a href="https://anushaforchicago.com/" target="_blank" style="display: inline-block; padding: 10px 15px; background-color: #111111; color: #ffffff; text-decoration: none; text-transform: uppercase; font-size: 0.9em; font-weight: bold; border-radius: 4px; letter-spacing: 1px;">Anusha Thotakura</a>-->
+        <!--<a href="https://CPSpac.org" target="_blank" style="display: inline-block; padding: 10px 15px; background-color: #111111; color: #ffffff; text-decoration: none; text-transform: uppercase; font-size: 0.9em; font-weight: bold; border-radius: 4px; letter-spacing: 1px;">Different Memebers of the School Board</a>-->
+      </div>
+    </div> 
+
+    <!-- Babysitting Callout Box (Upgraded with shadow style) -->
+    <div style="border: 3px solid #111111; padding: 35px 25px; text-align: center; margin-top: 40px; background-color: #ffffff; box-shadow: 6px 6px 0px #d38c35;">
+      <h3 style="margin: 0; color: #111111; font-size: 1.5em; text-transform: uppercase; letter-spacing: 1px; font-weight: 800;">Need Childcare? We've Got You.</h3>
+      <p style="margin: 20px 0; color: #444444; font-size: 1.05em; line-height: 1.6; font-weight: 300;">
+        Because parenting is hard, we are offering <strong>FREE babysitting</strong> for the event, provided directly by our CPS teachers. Enjoy your night out stress-free.
+      </p>
+      <a href="tel:7736633546" style="display: inline-block; background-color: #d38c35; color: #111111; padding: 15px 30px; text-decoration: none; font-weight: bold; font-size: 1.2em; text-transform: uppercase; letter-spacing: 1px; border: 2px solid #111111; transition: background-color 0.3s;">
+        Call or Text: (773) 663-3546
+      </a>
+    </div>
+
+    <!-- Dovetail Appreciation Box (Moved to Bottom) -->
+    <div style="background-color: #f6f6f6; border-left: 6px solid #d38c35; padding: 25px; margin: 50px 0 10px 0; text-align: left;">
+      <h3 style="margin: 0 0 10px 0; font-size: 1.15em; color: #111111; text-transform: uppercase; letter-spacing: 1px; font-weight: 800;">
+        🍻 A Massive Thank You to Dovetail Brewery
+      </h3>
+      <p style="margin: 0 0 20px 0; font-size: 0.95em; line-height: 1.6; color: #444444; font-weight: 300;">
+        This event wouldn't be possible without our incredible friends and community champions at <strong>Dovetail Brewery</strong>. Not only do they brew some of the finest Continental European-style beers in Chicago, but they consistently support our neighborhood. They have graciously opened their beautiful taproom doors to host us tonight because they are true believers in community, great beer, and "the fine tradition of hanging out." 
+        <br><br>
+        <em>Please show them some love, grab some beer to go, and be sure to tip your actual Dovetail staff!</em>
+      </p>
+      <a href="https://www.dovetailbrewery.com/" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #111111; color: #d38c35; text-decoration: none; text-transform: uppercase; font-size: 0.85em; font-weight: bold; letter-spacing: 1px;">
+        Visit DovetailBrewery.com
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div style="background-color: #111111; padding: 25px; text-align: center; font-size: 0.85em; color: #888888; text-transform: uppercase; letter-spacing: 1px;">
+    <strong>HOSTED BY THE CHICAGO PUBLIC SCHOOLS ALUMNI PAC (<a href="https://cpspac.org" style="color: #d38c35; text-decoration: none;">CPSpac.org</a>)</strong><br><br>
+    Supporting our schools, our teachers, and our parents.
+  </div>
+  
+</div>
