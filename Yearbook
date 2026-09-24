@@ -136,6 +136,31 @@
         padding-bottom: 3.5rem; /* Creates breathing room for the absolute label below */
     }
 
+    /* CTU ENDORSEMENT STAMP */
+    .yearbook-wrapper .ctu-stamp {
+        position: absolute;
+        top: -8px;
+        left: -12px;
+        background-color: var(--chi-red);
+        color: var(--accent-bg);
+        font-family: 'Courier Prime', Courier, monospace;
+        font-size: 0.8rem;
+        font-weight: 900;
+        padding: 4px 8px;
+        border: 2px solid var(--border-color);
+        transform: rotate(-8deg);
+        z-index: 5;
+        box-shadow: 3px 3px 0px var(--border-color);
+        letter-spacing: 0.5px;
+        pointer-events: none;
+    }
+
+    .yearbook-wrapper .candidate-card:nth-child(even) .ctu-stamp {
+        transform: rotate(8deg);
+        left: auto;
+        right: -12px;
+    }
+
     /* Image Link Button Styling */
     .yearbook-wrapper .photo-wrapper a.img-link {
         display: block;
@@ -240,17 +265,20 @@
         box-shadow: 6px 6px 0px var(--text-muted);
     }
 
-    .yearbook-wrapper .third-candidate-card a.img-link {
+    .yearbook-wrapper .third-candidate-card a.img-link,
+    .yearbook-wrapper .third-candidate-card .img-link {
         display: block;
         margin-right: 1.25rem;
         transition: transform 0.2s ease;
+        text-decoration: none;
     }
     
-    .yearbook-wrapper .third-candidate-card a.img-link:hover {
+    .yearbook-wrapper .third-candidate-card a.img-link:hover,
+    .yearbook-wrapper .third-candidate-card .img-link:hover {
         transform: scale(1.05);
     }
 
-    .yearbook-wrapper .third-candidate-card a.img-link img {
+    .yearbook-wrapper .third-candidate-card .img-link img {
         width: 70px;
         height: 70px;
         object-fit: cover;
@@ -365,6 +393,7 @@
                     </div>
                     <div class="candidate-card">
                         <div class="photo-wrapper">
+                            <div class="ctu-stamp">CTU ENDORSED</div>
                             <a href="https://hilarioforcps.com/" class="img-link" target="_blank" aria-label="Visit Hilario Dominguez's website">
                                 <img src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/hd-face_20260623_034242_30311_1.png" alt="Hilario Dominguez">
                             </a>
@@ -422,6 +451,7 @@
                 <div class="candidates-grid">
                     <div class="candidate-card incumbent-card">
                         <div class="photo-wrapper">
+                            <div class="ctu-stamp">CTU ENDORSED</div>
                             <a href="https://edbannon.com/" class="img-link" target="_blank" aria-label="Visit Ed Bannon's website">
                                 <img src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/EdBannon.JPG" alt="Ed Bannon">
                             </a>
@@ -456,6 +486,7 @@
                 <div class="candidates-grid">
                     <div class="candidate-card">
                         <div class="photo-wrapper">
+                            <div class="ctu-stamp">CTU ENDORSED</div>
                             <a href="https://www.communityforclaudia.com" class="img-link" target="_blank" aria-label="Visit Claudia Peralta's website">
                                 <img src="https://i.ibb.co/Q7v9GnGJ/Claudia-Peralta.png" alt="Claudia Peralta">
                             </a>
@@ -490,6 +521,7 @@
                 <div class="candidates-grid">
                     <div class="candidate-card incumbent-card">
                         <div class="photo-wrapper">
+                            <div class="ctu-stamp">CTU ENDORSED</div>
                             <a href="https://ebony4education.org/" class="img-link" target="_blank" aria-label="Visit Ebony DeBerry's website">
                                 <img src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Ebony_DeBerry_20240808_095534.png" alt="Ebony DeBerry">
                             </a>
@@ -534,6 +566,7 @@
                 <div class="candidates-grid">
                     <div class="candidate-card incumbent-card">
                         <div class="photo-wrapper">
+                            <div class="ctu-stamp">CHICAGO DSA ENDORSED</div>
                             <a href="https://www.mobilize.us/ourschoolschicago/event/1026814/" class="img-link" target="_blank" aria-label="Visit Debby Pope's website">
                                 <img src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/resized-debbiePOPE_20260630_061601_30659_1.jpg" alt="Debby Pope">
                             </a>
@@ -578,6 +611,7 @@
                 <div class="candidates-grid">
                     <div class="candidate-card incumbent-card">
                         <div class="photo-wrapper">
+                            <div class="ctu-stamp">CTU ENDORSED</div>
                             <a href="https://www.normaforchicago.org/" class="img-link" target="_blank" aria-label="Visit Norma Rios Sierra's website">
                                 <img src="https://www.cpsboe.org/content/images/person/norma_rios-sierra_photo_1.jpg" alt="Norma Rios-Sierra">
                             </a>
@@ -625,6 +659,7 @@
                     </div>
                     <div class="candidate-card">
                         <div class="photo-wrapper">
+                            <div class="ctu-stamp">CTU ENDORSED</div>
                             <a href="https://www.donesforschoolboard.com/" class="img-link" target="_blank" aria-label="Visit Jason Dónes's website">
                                 <img src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/JasonDones2024.jpg" alt="Jason Dónes">
                             </a>
@@ -646,6 +681,7 @@
                 <div class="candidates-grid">
                     <div class="candidate-card incumbent-card">
                         <div class="photo-wrapper">
+                            <div class="ctu-stamp">CHICAGO DSA ENDORSED</div>
                             <a href="https://neighborsforkarenzaccor.org/" class="img-link" target="_blank" aria-label="Visit Karen Zaccor's website">
                                 <img src="https://neighborsforkarenzaccor.org/wp-content/uploads/2024/08/Karen-Headshot.jpeg" alt="Karen Zaccor">
                             </a>
@@ -683,7 +719,7 @@
                 </div>
             </section>
 
-            <!-- DISTRICT 4B -->
+            <!-- DISTRICT 4B (HAS 3RD CANDIDATE) -->
             <section class="race-section">
                 <h2 class="race-header">District 4B</h2>
                 <p class="race-sub">Lakefront / Near North • Top 2 Candidates Shown</p>
@@ -718,6 +754,20 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="third-candidate-card" style="align-items: flex-start;">
+                    <div style="position: relative; flex: 0 0 70px; margin-right: 1.25rem; margin-bottom: 30px;">
+                        <div class="ctu-stamp" style="font-size: 0.55rem; padding: 2px 4px; top: -5px; left: -8px; letter-spacing: 0;">CTU MEMBER</div>
+                        <a class="img-link" style="margin-right: 0;">
+                            <img src="https://i.imgur.com/gZSqneF.jpeg" alt="Adam Cornelius">
+                        </a>
+                        <div class="superlative" style="top: 55px; left: -15px; width: 110px; font-size: 0.65rem; padding: 4px; line-height: 1.2;">"Most likely to lose to a dog."</div>
+                    </div>
+                    <div style="margin-top: 5px;">
+                        <h4>Also on the ballot: Adam Cornelius</h4>
+                        <p>A very generic candidate running for the District 4B school board seat.</p>
+                    </div>
+                </div>
             </section>
 
             <!-- DISTRICT 5A -->
@@ -727,6 +777,7 @@
                 <div class="candidates-grid">
                     <div class="candidate-card incumbent-card">
                         <div class="photo-wrapper">
+                            <div class="ctu-stamp">CTU ENDORSED</div>
                             <a href="https://www.jitubrown.com" class="img-link" target="_blank" aria-label="Visit Aaron Brown's website">
                                 <img src="https://www.cpsboe.org/content/images/person/jitubrown_1.jpg/image-full;max$250,0.ImageHandler" alt="Aaron Brown">
                             </a>
@@ -761,6 +812,7 @@
                 <div class="candidates-grid">
                     <div class="candidate-card incumbent-card">
                         <div class="photo-wrapper">
+                            <div class="ctu-stamp">CTU ENDORSED</div>
                             <a href="https://www.blaiseforschoolboard.com/" class="img-link" target="_blank" aria-label="Visit Michilla Blaise's website">
                                 <img src="https://www.cpsboe.org/content/images/person/michilla_blaise-6_resized.jpg" alt="Michilla Blaise">
                             </a>
@@ -795,6 +847,7 @@
                 <div class="candidates-grid">
                     <div class="candidate-card incumbent-card">
                         <div class="photo-wrapper">
+                            <div class="ctu-stamp">CTU ENDORSED</div>
                             <a href="https://www.anushathotakura.com" class="img-link" target="_blank" aria-label="Visit Anusha Thotakura's website">
                                 <img src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Anusha_Thotakura.jpg" alt="Anusha Thotakura">
                             </a>
@@ -873,6 +926,7 @@
                 <div class="candidates-grid">
                     <div class="candidate-card incumbent-card">
                         <div class="photo-wrapper">
+                            <div class="ctu-stamp">CTU ENDORSED</div>
                             <a href="https://secure.actblue.com/donate/lozano4schoolboard?refcode=directory" class="img-link" target="_blank" aria-label="Visit Emma Lozano's website">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Ri8vioSg-M3qEk6cgeqGhem_ckCfNrnliPsKq5dypw&s" alt="Emma Lozano">
                             </a>
@@ -1056,6 +1110,7 @@
                     </div>
                     <div class="candidate-card">
                         <div class="photo-wrapper">
+                            <div class="ctu-stamp">CTU ENDORSED</div>
                             <a href="https://www.katherinedunneback.com" class="img-link" target="_blank" aria-label="Visit Katherine S. Dunneback's website">
                                 <img src="https://actblue-indigo-uploads.s3.amazonaws.com/uploads/list-editor/86013d16-c743-442c-a772-593bfbcdc327-brandings/transient/header/image_url/20260531_Kate4SchoolBoard_07.JPG" alt="Katherine Dunneback">
                             </a>
@@ -1090,6 +1145,7 @@
                     </div>
                     <div class="candidate-card">
                         <div class="photo-wrapper">
+                            <div class="ctu-stamp">CTU ENDORSED</div>
                             <a href="https://www.tamekawalton.com" class="img-link" target="_blank" aria-label="Visit Tameka Walton's website">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTXJd0J1_v-riGpEb9Mv4iL10akbySgc0er4kPQkbV_w&s" alt="Tameka Walton">
                             </a>
@@ -1124,6 +1180,7 @@
                 <div class="candidates-grid">
                     <div class="candidate-card">
                         <div class="photo-wrapper">
+                            <div class="ctu-stamp">CTU ENDORSED</div>
                             <a href="https://www.connieandersonforcps.com" class="img-link" target="_blank" aria-label="Visit Connie Anderson's website">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT77X6_2RJqrqjGTRQGyR0yPJBkfanY7C1dlyPRT_sWzg&s=10" alt="Connie Anderson">
                             </a>
